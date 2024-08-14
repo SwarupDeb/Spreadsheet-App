@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { searchCells, undo, redo } from "../redux/spreadsheetSlice";
+import { searchCells, undo, redo, clearCells } from "../redux/spreadsheetSlice";
 
 const SearchFilter = () => {
   const [query, setQuery] = useState("");
@@ -11,8 +11,7 @@ const SearchFilter = () => {
   };
 
   const handleClear = () => {
-    setQuery("");
-    dispatch(searchCells(""));
+    dispatch(clearCells());
   };
 
   const handleUndo = () => {

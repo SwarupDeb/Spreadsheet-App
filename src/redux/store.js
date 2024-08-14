@@ -6,3 +6,4 @@ export const store = configureStore({
     spreadsheet: spreadsheetReducer,
   },
 });
+export default store;
